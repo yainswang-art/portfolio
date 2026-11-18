@@ -1,0 +1,64 @@
+#hangji{background:#091b22;padding-block:76px 56px}
+#hangji .flight-board{border-color:#324b51;grid-template-columns:minmax(0,1.65fr) minmax(290px,1fr)}
+#hangji .map-panel{padding:0;display:block;background:#030b12;min-height:0;overflow:hidden}
+#hangji .flight-endpoints{padding:20px 24px;position:relative;z-index:1;border-bottom:1px solid #ffffff14;background:#0c2029}
+.hj-route-arrow{color:#61d8db}
+.hj-map-viewport{height:390px;position:relative;overflow:hidden}
+#hangji #route{width:100%;height:100%;min-height:0}
+.hj-map-label{position:absolute;top:16px;left:20px;font-size:11px;letter-spacing:.08em;color:#b6d6dc;background:#07151dbd;padding:5px 8px;border-left:2px solid #74d9dc;pointer-events:none}
+.hj-camera{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);display:flex;background:#07151de8;border:1px solid #39545c;padding:3px;white-space:nowrap}
+.hj-camera button{border:0;background:none;color:#a9c4c7;padding:7px 11px;font-size:12px;min-height:36px}
+.hj-camera button[aria-pressed=true]{background:#c7e8db;color:#112d32}
+#hangji .flight-input{padding:16px 22px 19px;background:#0c2029;border-top:1px solid #ffffff14}
+.hj-player{display:flex;align-items:center;gap:14px;font-size:12px;color:#a9c4c7;min-height:38px}
+.hj-player button{background:#c7e8db;color:#122e32;border:1px solid #c7e8db;padding:7px 12px;font-size:12px;min-width:112px;min-height:36px}
+.hj-player output{margin-left:auto;font-variant-numeric:tabular-nums}
+#hangji #timeline{margin:10px 0 12px;display:block}
+.hj-stages{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.hj-stages button{border:0;border-top:2px solid #39545c;background:none;padding:10px 0 4px;font-size:11px;color:#9cb9bf;min-height:40px;white-space:nowrap}
+.hj-stages button[aria-pressed=true]{border-color:#7de4df;color:#effffc}
+#hangji .flight-details{background:#e9e8df;color:#132522;padding:30px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+#hangji #time-label{color:#52675e}
+#hangji .flight-details .hj-detail-eyebrow{color:#52675e}
+body.hj-visible>.masthead{background:#091b22ed;color:#ebf6ff}
+body.hj-visible>.masthead .identity span{color:#bed5d1}
+body.hj-visible>.masthead .mast{border-color:#c5e6df26}
+.hj-detail-eyebrow{font-size:10px;color:#617370;letter-spacing:.12em;margin-bottom:22px}
+#hangji #flight-time{font-size:clamp(30px,3.1vw,52px);letter-spacing:-.04em}
+#hangji #flight-note{font-size:14px;line-height:1.8;min-height:76px;margin-bottom:17px}
+.hj-data{width:100%;border-top:1px solid #c5cec6;margin:0 0 24px;padding-top:12px;font-size:12px}
+.hj-data>div{display:flex;justify-content:space-between;gap:12px;padding:7px 0}
+.hj-data dt{color:#617370;flex-shrink:0}.hj-data dd{margin:0;text-align:right;color:#253e38}
+.hj-trio{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 13px;padding:13px 0 12px;border-top:1px solid #c5cec6;border-bottom:1px solid #c5cec6}
+.hj-trio>div{padding:0 12px;border-right:1px solid #d2d8cf;min-width:0}
+.hj-trio>div:first-child{padding-left:0}
+.hj-trio>div:last-child{border-right:0;padding-right:0}
+.hj-trio dt{font-size:10px;letter-spacing:.1em;color:#617370;margin-bottom:5px;white-space:nowrap}
+.hj-trio dd{margin:0;font-size:clamp(16px,1.5vw,22px);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:#253e38;white-space:nowrap}
+.hj-trio dd.is-range{color:#a15a2e;font-weight:600}
+.hj-trio-note{max-width:34ch;font-size:12px;line-height:1.75;color:#5b6f65;margin:0 0 16px}
+.hj-bottom{display:grid;grid-template-columns:1.65fr 1fr;gap:28px;padding-top:20px;color:#91b0b3;font-size:12px;line-height:1.8}
+.hj-explanation summary{cursor:pointer;color:#c1dbd4;min-height:32px}.hj-explanation p{padding-top:9px}
+.hj-sr-only{position:absolute!important;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+#hangji button:focus-visible,#hangji input:focus-visible,#hangji summary:focus-visible{outline:2px solid #53bfc7;outline-offset:4px}
+@media(max-width:760px){#hangji{padding-block:52px 36px}#hangji .flight-board{grid-template-columns:1fr}.hj-map-viewport{height:330px}#hangji .flight-endpoints{padding:16px;font-size:11px}#hangji .flight-endpoints b{font-size:16px}#hangji .flight-input{padding:14px 14px 17px}#hangji .flight-details{padding:25px 22px}.hj-detail-eyebrow{margin-bottom:14px}#hangji #flight-note{min-height:0;margin-bottom:14px}.hj-bottom{grid-template-columns:1fr;gap:15px}#hangji #flight-time{font-size:42px}.hj-data{margin-bottom:17px}.hj-trio>div{padding:0 8px}.hj-trio dd{font-size:15px}.hj-trio dt{font-size:9px;letter-spacing:.06em}.hj-stages{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* —— 七段飞行面板 —— */
+#hangji #hj-seg-name{font:500 clamp(27px,2.7vw,40px)/1.08 var(--serif);letter-spacing:-.03em;color:#132522;margin:0 0 4px}
+#hangji .hj-seg{width:100%;margin:14px 0 16px;border-top:1px solid #c5cec6}
+#hangji .hj-seg>div{display:grid;grid-template-columns:74px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px solid #d5dbd1}
+#hangji .hj-seg dt{font-size:10px;letter-spacing:.04em;color:#6b7f78;line-height:2.1;white-space:nowrap}
+#hangji .hj-seg dd{margin:0;font-size:13px;line-height:1.78;color:#26413a}
+#hangji .hj-seg .hj-seg-eta{padding:13px 0 6px;border-bottom:0}
+#hangji .hj-seg-eta dt{line-height:2.4}
+#hangji #hj-seg-eta{font-size:20px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.25}
+#hangji #hj-seg-eta[data-tone=range]{color:#a15a2e}
+#hangji #hj-seg-eta[data-tone=final]{font-weight:600}
+#hangji .hj-eta-caption{font-size:9.5px;letter-spacing:.12em;color:#7f918a;margin:0 0 7px}
+#hangji .hj-eta-rail{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px;margin:0 0 18px;font-size:11px;color:#8b9a92}
+#hangji .hj-eta-rail span{color:#b3bdb6}
+#hangji .hj-eta-rail button{border:0;background:none;padding:2px 1px;font:inherit;font-variant-numeric:tabular-nums;color:#5d6f68;min-height:26px}
+#hangji .hj-eta-rail button[aria-pressed=true]{color:#14342e;font-weight:600;box-shadow:inset 0 -1px 0 #14342e}
+#hangji #flight-design{font-size:12px;color:#3f5650;letter-spacing:.02em;margin-top:6px}
+#hangji #flight-design:hover{color:#0f332c}
+@media(max-width:760px){#hangji .hj-seg>div{grid-template-columns:1fr;gap:2px;padding:10px 0}#hangji .hj-seg dt{line-height:1.9}#hangji #hj-seg-name{font-size:26px}#hangji .hj-eta-rail{margin-bottom:14px}}
+@media(prefers-reduced-motion:reduce){#hangji *{scroll-behavior:auto!important}}

@@ -1,0 +1,22 @@
+#sky-flight{inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;border:0;padding:0;background:#030d18;color:#eaf2e8;overflow:hidden;font-family:var(--sans,system-ui)}
+#sky-flight:not(:popover-open){display:none}
+#sky-flight .sf-stage{position:absolute;inset:0}#sky-flight canvas{display:block;width:100%;height:100%;touch-action:none}
+#sky-flight .sf-sky{position:absolute;inset:0;background:linear-gradient(#244d79,#88bdd0 65%,#e4c798);opacity:var(--sf-sky,1);pointer-events:none}
+#sky-flight .sf-sea{position:absolute;inset:65% 0 0;background:repeating-linear-gradient(177deg,#a9c9d033 0 1px,transparent 2px 17px),linear-gradient(#3d7e91,#153c57);transform:translateY(calc(var(--sf-rise,0)*110%));opacity:var(--sf-sky,1);pointer-events:none}
+#sky-flight .sf-clouds{position:absolute;inset:0;pointer-events:none;opacity:var(--sf-cloud,0);background:radial-gradient(ellipse at 5% 65%,#e8eef2aa,transparent 42%),radial-gradient(ellipse at 98% 35%,#f2f1e6b0,transparent 35%);transform:scale(calc(1 + var(--sf-rise,0)*.8))}
+#sky-flight .sf-top{position:absolute;inset:25px 5% auto;display:flex;justify-content:space-between;align-items:center;gap:20px;z-index:2}
+#sky-flight .sf-brand{font-size:12px;letter-spacing:.15em;color:#c7dedc}
+#sky-flight button{background:#08202ca3;color:#eaf2e8;border:1px solid #9bc7cd70;padding:11px 17px;min-height:44px;font:13px var(--sans,system-ui);cursor:pointer}
+#sky-flight .sf-heading{position:absolute;left:8%;top:19%;max-width:480px;pointer-events:none;text-shadow:0 2px 20px #02152850}
+#sky-flight #sf-title{font:500 clamp(28px,4vw,56px)/1.4 var(--serif,serif);letter-spacing:-.025em;margin:0 0 20px}
+#sky-flight #sf-caption{font-size:14px;line-height:1.9;color:#c9dfdc;max-width:300px}
+#sky-flight .sf-bottom{position:absolute;inset:auto 8% 5%;display:grid;grid-template-columns:1fr auto;gap:15px 30px;align-items:center;z-index:2}
+#sky-flight .sf-controls{display:flex;align-items:center;gap:15px}#sky-flight input{width:min(260px,35vw);accent-color:#abdbd0;min-height:30px}
+#sky-flight .sf-bottom p{font-size:12px;color:#c3ddd8;margin:0;grid-column:1/-1;background:#061b287d;padding:5px 8px;width:fit-content}
+#sky-flight #sf-enter{background:#c8e0d5;color:#18333b;border-color:#c8e0d5}
+#sky-flight .sf-marker{position:absolute;background:#061721d9;border-left:2px solid #e2c88f;padding:5px 9px;font-size:11px;pointer-events:none;white-space:nowrap;transform:translate(10px,-100%)}
+#sky-flight .sf-szx{transform:translate(-100%,8px)}#sky-flight .sf-marker[hidden]{display:none}
+#sky-flight #sf-status{position:absolute;top:68%;left:8%;font-size:13px;color:#c6dcd3}
+#sky-flight button:focus-visible,#sky-flight input:focus-visible{outline:2px solid #e0c88c;outline-offset:4px}
+#hangji .sky-return{display:inline-block;margin-bottom:20px;font-size:12px;color:#a9cfc4;border-bottom:1px solid #8dbbb855;padding:4px 0}
+@media(max-width:600px){#sky-flight .sf-top{top:16px}#sky-flight .sf-heading{left:7%;top:14%;max-width:82%}#sky-flight #sf-title{font-size:30px}#sky-flight #sf-caption{font-size:12px}#sky-flight .sf-bottom{inset:auto 6% 4%;grid-template-columns:1fr;gap:12px}#sky-flight .sf-controls{justify-content:space-between}#sky-flight input{width:50vw}#sky-flight .sf-marker{font-size:10px}#sky-flight .sf-bottom p{font-size:10px}#sky-flight button{padding:10px 13px}}

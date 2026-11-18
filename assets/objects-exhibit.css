@@ -1,0 +1,37 @@
+/* All selectors are intentionally confined to the existing objects section. */
+#objects.objects-exhibit{position:relative;isolation:isolate;overflow:clip;background:#0b2932;padding-bottom:100px}
+#objects .collection-water{position:absolute;inset:0;height:auto;margin:0;background:radial-gradient(ellipse at 26% 5%,#35747b35,transparent 58%),linear-gradient(180deg,#102d35 0%,#092833d9 35%,#061b29ed 100%),url("below.webp") center 25%/cover}
+#objects .collection-water::before{opacity:.22}
+#objects .collection-rays{opacity:.6}
+#objects .collection-flecks i{background:#c5e9e6;box-shadow:0 0 6px #a9e3db66}
+#objects .collection-flecks i:nth-child(6n){background:#e1c18b;box-shadow:0 0 8px #e1c18b55}
+#objects .collection-content{position:relative;z-index:1;padding-top:88px}
+#objects .collection-content header{margin-bottom:48px}
+#objects .artifact-field{position:relative;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:165px 175px 150px 175px;column-gap:24px;row-gap:16px;align-items:center}
+#objects .artifact{position:relative;align-self:center;min-width:0;--objects-tilt:1deg}
+#objects .artifact button{position:relative;background:transparent;border:0;box-shadow:none;border-radius:0;padding:12px 6px;gap:14px;outline-offset:8px;-webkit-tap-highlight-color:transparent}
+#objects .artifact button:focus-visible{outline:2px solid #a6ded7}
+#objects .artifact img{display:block;width:auto;height:var(--height);max-width:100%;max-height:var(--height);object-fit:contain;background:transparent;border:0;box-shadow:none;mix-blend-mode:normal;filter:drop-shadow(0 20px 18px #020e185c);animation:objects-drift var(--objects-speed,9s) ease-in-out var(--delay,0s) infinite alternate;transition:scale .35s ease,filter .35s ease,opacity .18s linear;transform-origin:50% 62%;will-change:transform}
+#objects .artifact button:hover img,#objects .artifact button:focus-visible img{scale:1.065;filter:drop-shadow(0 16px 24px #91e0da22) drop-shadow(0 8px 14px #010e18a6)}
+#objects .artifact-caption{position:relative;z-index:1;opacity:0;transform:translateY(7px);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+#objects .artifact-caption strong{color:#f1e9d9;font-size:clamp(14px,1.3vw,19px);font-weight:500}
+#objects .artifact-caption small{color:#a9cbc9;font-size:12px;opacity:1;letter-spacing:.025em}
+#objects .artifact button:hover .artifact-caption,#objects .artifact button:focus-visible .artifact-caption{opacity:1;transform:none}
+#objects .artifact-teapot{grid-column:1/6;grid-row:1/3;--height:320px;--objects-speed:10s;--objects-tilt:-1.1deg}
+#objects .artifact-goblet{grid-column:6/9;grid-row:1;--height:126px;--objects-speed:8.5s}
+#objects .artifact-handing-pot{grid-column:9/13;grid-row:1/3;--height:290px;--objects-speed:11s;--objects-tilt:-.8deg}
+#objects .artifact-chailuo{grid-column:1/5;grid-row:3/5;--height:210px;--objects-speed:9.5s}
+#objects .artifact-figure-statue{grid-column:5/9;grid-row:3/5;--height:265px;--objects-speed:10.5s;--objects-tilt:-1deg}
+#objects .artifact-dingdong-bowl{grid-column:9/13;grid-row:3;--height:170px;--objects-speed:9s}
+#objects .artifact-compass{grid-column:10/13;grid-row:4;--height:100px;--objects-speed:8s}
+#objects .objects-particle-layer{position:absolute;inset:0;z-index:3;display:block;width:100%;height:100%;pointer-events:none;opacity:0;transition:none}
+#objects .objects-particle-layer[data-active=true]{opacity:1}
+#objects .objects-selected img{opacity:0;animation-play-state:paused}
+#objects .objects-selected .artifact-caption{opacity:0}
+#objects.objects-resting :is(.artifact img,.collection-rays,.collection-flecks i,.collection-water::before){animation-play-state:paused}
+#objects .objects-3d-slot[hidden]{display:none}
+@keyframes objects-drift{from{transform:translate3d(-2px,-7px,0) rotate(calc(-1 * var(--objects-tilt)))}to{transform:translate3d(3px,8px,0) rotate(var(--objects-tilt))}}
+@media(max-width:900px) and (min-width:601px){#objects .artifact-field{column-gap:14px;grid-template-rows:145px 155px 135px 155px}#objects .artifact-teapot{--height:255px}#objects .artifact-handing-pot{--height:240px}#objects .artifact-figure-statue{--height:225px}#objects .artifact-chailuo{--height:170px}#objects .artifact-dingdong-bowl{--height:135px}#objects .artifact-compass{--height:85px}}
+@media(hover:none),(pointer:coarse){#objects .artifact-caption{opacity:1;transform:none}}
+@media(max-width:600px){#objects.objects-exhibit{padding-bottom:64px}#objects .collection-content{padding-top:52px}#objects .collection-content header{margin-bottom:34px}#objects .artifact-field{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;gap:30px 15px}#objects .artifact-field .artifact{grid-column:auto;grid-row:auto;--height:165px}#objects .artifact-field .artifact-teapot{grid-column:1/-1;--height:255px}#objects .artifact-field .artifact-handing-pot{--height:210px}#objects .artifact-field .artifact-figure-statue{--height:190px}#objects .artifact-field .artifact-compass{--height:110px}#objects .artifact-field .artifact-goblet{--height:135px}#objects .artifact-field .artifact-dingdong-bowl{--height:125px}#objects .artifact-caption{opacity:1;transform:none}#objects .artifact-caption strong{font-size:14px}#objects .artifact-caption small{font-size:11px}#objects .artifact button{padding:8px 0;gap:12px}#objects .collection-flecks i:nth-child(2n){display:none}}
+@media(prefers-reduced-motion:reduce){#objects *,#objects *::before,#objects *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}#objects .artifact img{will-change:auto}#objects .objects-particle-layer{display:none}#objects .artifact button:hover img,#objects .artifact button:focus-visible img{scale:1}#objects .artifact-caption{transform:none}}
